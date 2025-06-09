@@ -30,7 +30,7 @@ for each Investigator:
 ### Region -> Experimenter
 
 Then for a specific Experimenter who is responsible for the study we
-defined the 2nd level (Region) entry as a join `Investigator_Experimenter`
+defined the 2nd level (Region) entry as a joint `Investigator_Experimenter`
 entry
 
 ![wt1-5-newregion.png](source/images/walkthrough-1/wt1-5-newregion.png)
@@ -51,14 +51,16 @@ the same Experimenter):
 
 ## New Program
 
-Now it is possible to finally define Program(s) with the desired
-sequence of protocols:
+Now it is possible to finally define a "Program" (which here refers
+to a set of protocols).
+
+Define one with a desired sequence of protocols:
 
 ![wt1-9.png](source/images/walkthrough-1/wt1-9.png)
 
 ![wt1-a.png](source/images/walkthrough-1/wt1-a.png)
 
-Note that the sequence names follow [reproin
+Note that the sequence names used follow [reproin
 specification](https://github.com/nipy/heudiconv/blob/master/heudiconv/heuristics/reproin.py#L26).
 So in the example below it is intended for the first session of a study
 collecting a T1 anatomical, a fieldmap, two runs for task1 functional
@@ -71,7 +73,7 @@ otherwise have desired settings:
 
 ![wt1-b.1-save.png](source/images/walkthrough-1/wt1-b.1-save.png)
 
-Program should be saved under some descriptive (but otherwise arbitrary)
+The Program should be saved under some descriptive (but otherwise arbitrary)
 name.  Note that if the study requires multiple scanning sessions, it is
 useful to use `_ses-` suffix to right away depict for which session a
 particular program is intended.
@@ -120,8 +122,8 @@ within transmitted DICOM headers.
 
 Note also that **only** the `Investigator_Experimenter` and
 `StudyID_Study-Name` fields get copied into the `Study Description`. The
-**Program name** (such as `anuname-eg-ses01`) is **not copied**, and
-appears nowhere within DICOM precluding its utility for automation
+**Program name** (such as `anyname-eg-ses01`) is **not copied**, and
+appears nowhere within DICOM, precluding its use for automation
 (hence `anyname` was chosen here for this example).
 
 ![wt1-d.4.chose-exam.png](source/images/walkthrough-1/wt1-d.4.chose-exam.png)
